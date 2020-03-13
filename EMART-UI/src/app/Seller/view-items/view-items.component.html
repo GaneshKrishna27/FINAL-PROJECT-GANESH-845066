@@ -47,17 +47,17 @@
            <div class=" table">
             <div class="table-light">
                <tr>
-                   <th>ItemId:</th>
+                   <!-- <th>ItemId:</th> -->
                    <th>ItemName:</th>
-                   <th>Price:</th>
+                   <th>Price</th>
                    <th>Description</th>
-                   <th>Stock:</th>
-                   <th>Remarks:</th>
-                   <th>Image:</th>
+                   <th>Stock</th>
+                   <th>Remarks</th>
+                   <th>Image</th>
                    <!-- <th>SellerId</th> -->
                </tr>
                <tr *ngFor="let item of list">  
-                    <td>{{item.iid}}</td>
+                    <!-- <td>{{item.iid}}</td> -->
                     <td>{{item.itemname}}</td>
                     <td>{{item.price}}</td>
                     <td>{{item.description}}</td>
@@ -77,16 +77,14 @@
                     </div>
                     <div class="modal-body">
                       <form [formGroup]="itemForm">
-                        <div class="form-group col-md-5 offset-4">
-                          <label>ItemId:</label>
+                        <!-- <div class="form-group col-md-5 offset-4">
+                          <label>ItemId</label>
                           <input type="text" formControlName="Iid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Iid.errors }">
-                          <!-- <select formControlName="Iid" class="form-control" (change)="Search()">
-                            <option *ngFor="let item of list" value="{{item.iid}}">{{item.iid}}</option>
-                        </select> -->
+                         
                           <div *ngIf="submitted && f.Iid.errors" class="invalid-feedback">
                             <div *ngIf="f.Iid.errors.required">itemid is required</div>
                           </div>
-                        </div>
+                        </div> -->
 
   
                         <div class="form-group col-md-5 offset-4">
@@ -128,13 +126,13 @@
                             </div>
                           </div>
                     
-                            <div class="form-group col-md-5 offset-4">
-                              <label for="exampleFormControlFile1">Upload Photo:</label>
-                              <input type="file" formControlName="Photo" class="form-control-file"[ngClass]="{ 'is-invalid': submitted && f.Photo.errors }">
-                              <div *ngIf="submitted && f.Photo.errors" class="invalid-feedback">
-                                <div *ngIf="f.Photo.errors.required">photo is required</div>
+                            <!-- <div class="form-group col-md-5 offset-4">
+                              <label for="exampleFormControlFile1">Image</label>
+                              <input type="file" formControlName="image" class="form-control-file"[ngClass]="{ 'is-invalid': submitted && f.image.errors }">
+                              <div *ngIf="submitted && f.image.errors" class="invalid-feedback">
+                                <div *ngIf="f.image.errors.required">photo is required</div>
                               </div>
-                            </div>
+                            </div> -->
       
                             <div class="text-center">
                               <button class="btn btn-primary mr-1" (click)="Update()">Update</button>

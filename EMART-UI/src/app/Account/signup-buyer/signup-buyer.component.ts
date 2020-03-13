@@ -21,7 +21,7 @@ export class SignupBuyerComponent implements OnInit {
     ngOnInit() {
         this.SignupForm = this.formBuilder.group({
             bid: [''],
-            username:['',[Validators.required,Validators.pattern('^[a-z]{3,20}$')]],
+            username:['',[Validators.required,Validators.pattern('^[A-Za-z]{3,20}$')]],
             password:['',[Validators.required,Validators.pattern('^[A-Za-z]{8}[~!@#$%^&*()]$')]],
             email: ['', [Validators.required, Validators.email]],
             mobile:['',[Validators.required,Validators.pattern("^[6-9][0-9]{9}$")]],

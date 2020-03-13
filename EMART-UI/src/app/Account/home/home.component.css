@@ -31,14 +31,4 @@
     
   } */
 
-  .footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color:transparent;
-    color:#8B008B;
-    text-align: center;
-    height: auto;
-    font-weight: bold;
-  }
+ 
