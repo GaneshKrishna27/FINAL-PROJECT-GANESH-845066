@@ -20,17 +20,17 @@ namespace Emart.TestService
         [Description("Test GetProfile")]
         public void TestGetProfile()
         {
-            var result = _repo.Getprofile("1");
+            var result = _repo.Getprofile("S432");
             Assert.IsNotNull(result);
         }
         [Test]
         [Description("Test EditProfile")]
         public void TestEditProfile()
         {
-            Seller seller = _repo.Getprofile("2");
+            Seller seller = _repo.Getprofile("S432");
             seller.Username = "krishna";
             _repo.Editprofile(seller);
-            Seller seller1 = _repo.Getprofile("2");
+            Seller seller1 = _repo.Getprofile("S432");
 
             Assert.AreSame(seller, seller1);
         }

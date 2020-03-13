@@ -223,3 +223,4 @@ D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.TestService\obj\Release\net
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.TestService\obj\Release\netcoreapp3.1\Emart.TestService.csproj.CopyComplete
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.TestService\obj\Release\netcoreapp3.1\Emart.TestService.dll
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.TestService\obj\Release\netcoreapp3.1\Emart.TestService.pdb
+D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.TestService\bin\Release\netcoreapp3.1\.filenesting.json

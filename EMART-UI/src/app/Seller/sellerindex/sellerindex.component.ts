@@ -14,7 +14,7 @@ export class SellerindexComponent implements OnInit {
   username: string;
 
   constructor(private route:Router,private service:SellerService) {
-    if(!(localStorage.getItem('token'))){
+    if(!(localStorage.getItem('sid'))){
       this.route.navigateByUrl('/home');
     }
     else

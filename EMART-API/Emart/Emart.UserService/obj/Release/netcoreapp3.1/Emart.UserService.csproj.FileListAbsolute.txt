@@ -128,11 +128,11 @@ D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.UserService\bin\Release\net
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.UserService\obj\Release\netcoreapp3.1\Emart.UserService.csprojAssemblyReference.cache
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.UserService\obj\Release\netcoreapp3.1\staticwebassets\Emart.UserService.StaticWebAssets.Manifest.cache
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.UserService\obj\Release\netcoreapp3.1\staticwebassets\Emart.UserService.StaticWebAssets.xml
-D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.UserService\obj\Release\netcoreapp3.1\Emart.UserService.MvcApplicationPartsAssemblyInfo.cs
-D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.UserService\obj\Release\netcoreapp3.1\Emart.UserService.MvcApplicationPartsAssemblyInfo.cache
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.UserService\obj\Release\netcoreapp3.1\Emart.UserService.AssemblyInfoInputs.cache
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.UserService\obj\Release\netcoreapp3.1\Emart.UserService.AssemblyInfo.cs
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.UserService\obj\Release\netcoreapp3.1\Emart.UserService.RazorTargetAssemblyInfo.cache
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.UserService\obj\Release\netcoreapp3.1\Emart.UserService.csproj.CopyComplete
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.UserService\obj\Release\netcoreapp3.1\Emart.UserService.dll
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.UserService\obj\Release\netcoreapp3.1\Emart.UserService.pdb
+D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.UserService\obj\Release\netcoreapp3.1\Emart.UserService.MvcApplicationPartsAssemblyInfo.cs
+D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.UserService\obj\Release\netcoreapp3.1\Emart.UserService.MvcApplicationPartsAssemblyInfo.cache

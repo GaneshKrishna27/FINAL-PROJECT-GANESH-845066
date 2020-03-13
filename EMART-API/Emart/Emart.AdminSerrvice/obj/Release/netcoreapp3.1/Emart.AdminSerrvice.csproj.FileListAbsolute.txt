@@ -128,11 +128,11 @@ D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.AdminSerrvice\bin\Release\n
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.AdminSerrvice\obj\Release\netcoreapp3.1\Emart.AdminSerrvice.csprojAssemblyReference.cache
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.AdminSerrvice\obj\Release\netcoreapp3.1\staticwebassets\Emart.AdminSerrvice.StaticWebAssets.Manifest.cache
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.AdminSerrvice\obj\Release\netcoreapp3.1\staticwebassets\Emart.AdminSerrvice.StaticWebAssets.xml
-D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.AdminSerrvice\obj\Release\netcoreapp3.1\Emart.AdminSerrvice.MvcApplicationPartsAssemblyInfo.cs
-D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.AdminSerrvice\obj\Release\netcoreapp3.1\Emart.AdminSerrvice.MvcApplicationPartsAssemblyInfo.cache
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.AdminSerrvice\obj\Release\netcoreapp3.1\Emart.AdminSerrvice.AssemblyInfoInputs.cache
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.AdminSerrvice\obj\Release\netcoreapp3.1\Emart.AdminSerrvice.AssemblyInfo.cs
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.AdminSerrvice\obj\Release\netcoreapp3.1\Emart.AdminSerrvice.RazorTargetAssemblyInfo.cache
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.AdminSerrvice\obj\Release\netcoreapp3.1\Emart.AdminSerrvice.csproj.CopyComplete
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.AdminSerrvice\obj\Release\netcoreapp3.1\Emart.AdminSerrvice.dll
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.AdminSerrvice\obj\Release\netcoreapp3.1\Emart.AdminSerrvice.pdb
+D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.AdminSerrvice\obj\Release\netcoreapp3.1\Emart.AdminSerrvice.MvcApplicationPartsAssemblyInfo.cs
+D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.AdminSerrvice\obj\Release\netcoreapp3.1\Emart.AdminSerrvice.MvcApplicationPartsAssemblyInfo.cache

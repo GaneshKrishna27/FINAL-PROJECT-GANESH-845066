@@ -17,7 +17,7 @@ buyer:Buyer;
   constructor(private service:BuyerService,private route:Router) {
     
 
-    if(!(localStorage.getItem('token'))){
+    if(!(localStorage.getItem('bid'))){
       this.route.navigateByUrl('/home');
     }
     else

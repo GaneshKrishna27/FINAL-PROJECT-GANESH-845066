@@ -57,11 +57,11 @@ D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.Gateway\bin\Release\netcore
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.csprojAssemblyReference.cache
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\staticwebassets\Emart.Gateway.StaticWebAssets.Manifest.cache
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\staticwebassets\Emart.Gateway.StaticWebAssets.xml
-D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.MvcApplicationPartsAssemblyInfo.cs
-D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.MvcApplicationPartsAssemblyInfo.cache
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.AssemblyInfoInputs.cache
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.AssemblyInfo.cs
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.RazorTargetAssemblyInfo.cache
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.csproj.CopyComplete
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.dll
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.pdb
+D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.MvcApplicationPartsAssemblyInfo.cs
+D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.MvcApplicationPartsAssemblyInfo.cache

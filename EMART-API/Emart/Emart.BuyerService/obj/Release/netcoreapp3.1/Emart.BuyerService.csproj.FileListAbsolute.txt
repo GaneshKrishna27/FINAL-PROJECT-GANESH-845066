@@ -128,8 +128,6 @@ D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.BuyerService\bin\Release\ne
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.BuyerService\obj\Release\netcoreapp3.1\Emart.BuyerService.csprojAssemblyReference.cache
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.BuyerService\obj\Release\netcoreapp3.1\staticwebassets\Emart.BuyerService.StaticWebAssets.Manifest.cache
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.BuyerService\obj\Release\netcoreapp3.1\staticwebassets\Emart.BuyerService.StaticWebAssets.xml
-D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.BuyerService\obj\Release\netcoreapp3.1\Emart.BuyerService.MvcApplicationPartsAssemblyInfo.cs
-D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.BuyerService\obj\Release\netcoreapp3.1\Emart.BuyerService.MvcApplicationPartsAssemblyInfo.cache
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.BuyerService\obj\Release\netcoreapp3.1\Emart.BuyerService.AssemblyInfoInputs.cache
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.BuyerService\obj\Release\netcoreapp3.1\Emart.BuyerService.AssemblyInfo.cs
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.BuyerService\obj\Release\netcoreapp3.1\Emart.BuyerService.RazorTargetAssemblyInfo.cache
@@ -137,3 +135,5 @@ D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.BuyerService\obj\Release\ne
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.BuyerService\obj\Release\netcoreapp3.1\Emart.BuyerService.dll
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.BuyerService\obj\Release\netcoreapp3.1\Emart.BuyerService.pdb
 D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.BuyerService\bin\Release\netcoreapp3.1\.filenesting.json
+D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.BuyerService\obj\Release\netcoreapp3.1\Emart.BuyerService.MvcApplicationPartsAssemblyInfo.cs
+D:\FINAL-PROJECT-GANESH-845066\EMART-API\Emart\Emart.BuyerService\obj\Release\netcoreapp3.1\Emart.BuyerService.MvcApplicationPartsAssemblyInfo.cache

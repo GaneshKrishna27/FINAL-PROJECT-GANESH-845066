@@ -12,12 +12,12 @@ import { Router } from '@angular/router';
 })
 export class AdditemsComponent implements OnInit {
   additemsForm: FormGroup;
-    submitted = false;
+    submitted=false;
     items:Items;
     categorylist:Category[];
     subcategorylist:SubCategory[];
     image:string;
-  username: string;
+   username: string;
 
     constructor(private formBuilder: FormBuilder,private service:SellerService,private route:Router) {
       
@@ -28,28 +28,22 @@ export class AdditemsComponent implements OnInit {
       
      }
     ngOnInit() {
-
-    this.additemsForm = this.formBuilder.group({
-      Iid: [''],
+      this.additemsForm = this.formBuilder.group({
+    //  Iid: [''],
       Cid: ['', Validators.required],
-      SCid: ['', [Validators.required]],
-      Sid: ['', [Validators.required]],
-      Itemname:['',[Validators.required]],
-      Price:['',[Validators.required]],
-      Description:['',[Validators.required]],
-      Stock:['',[Validators.required]],
-      Remarks:['',[Validators.required]],
-      image:['',[Validators.required]]
-
-    
+      SCid: ['', Validators.required],
+      Sid: [''],
+      Itemname:['',Validators.required],
+      Price:['',Validators.required],
+      Description:['',Validators.required],
+      Stock:['',Validators.required],
+      Remarks:['',Validators.required],
+      image:['',Validators.required]
   });
-  
   }
 
 // convenience getter for easy access to form fields
 get f() { return this.additemsForm.controls; }
-
-
 
 onGetsubcategory()
   {
@@ -64,11 +58,15 @@ onGetsubcategory()
 onSubmit() {
   this.submitted = true;
    // display form values on success
-   if(this.additemsForm.valid){
+   console.log('gadsfr');
+   if(this.additemsForm.valid)
+   {  
+    this.Add(); 
     //  let sid=localStorage.getItem('sid')
-    alert('SUCCESS!! :-)\n\n') 
+    alert('SUCCESS!! :-)\n\n')
+    
   }
-  this.Add();
+  
 }
 Add()
 {
@@ -83,11 +81,10 @@ Add()
     this.items.stock=Number(this.additemsForm.value["Stock"]);
     this.items.remarks=this.additemsForm.value["Remarks"];
     this.items.image=this.image;
-    
     console.log(this.items);
     this.service.Additem(this.items).subscribe(res=>{
       console.log('Items Added');
-      alert("Items added");
+      alert("Items Added");
     },err=>{
       console.log(err);
     })

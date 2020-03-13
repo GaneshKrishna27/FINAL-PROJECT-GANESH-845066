@@ -87,9 +87,9 @@ namespace Emart.TestService
         }
         [Test]
         [Description("Test GetCartItems")]
-        public void GetCartItems()
+        public void GetCartItems(string Bid)
         {
-            var result = _repo.GetCartItems();
+            var result = _repo.GetCartItems(Bid);
             Assert.IsNotNull(result);
         }
         [Test]
