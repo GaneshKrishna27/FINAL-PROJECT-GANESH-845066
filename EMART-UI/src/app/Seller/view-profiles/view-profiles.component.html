@@ -1,0 +1,119 @@
+<div class="container">
+    <div class="card mb-3 offset-3" style="max-width: 540px;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img class="card-img-top" src="/assets/images/s.jpeg" alt="Card image cap">
+        </div>
+        <div class="col-md-8" >
+          <div class="card-body"  >
+            <h5 class="card-title">{{seller.username}}</h5>
+            <p class="card-text"> CampanyName:{{seller.companyname}}</p>
+            <p class="card-text"> Gstin:{{seller.gstin}}</p>
+            <p class="card-text"> Briefaboutcompany:{{seller.briefaboutcompany}}</p>
+            <p class="card-text"> Address:{{seller.address}}</p>
+            <p class="card-text"> Website:{{seller.website}}</p>
+            <p class="card-text">Email:{{seller.email}}</p>
+            <p class="card-text"> Mobile:{{seller.mobile}}</p>
+          </div>
+          <div class="card-footer text-muted">
+            <button class="btn btn-success mr-1"  data-toggle="modal" data-target="#myModal" (click)="Editprofile()" >EditProfile</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title">EditProfile</h4>
+          </div>
+          <div class="modal-body">
+            <form [formGroup]="editprofilesForm">
+                        <div class="form-group col-md-5 offset-4">
+                            <label>UserName:</label>
+                            <input type="text" formControlName="Username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Username.errors }" />
+                            <div *ngIf="submitted && f.Username.errors" class="invalid-feedback">
+                                <div *ngIf="f.Username.errors.required"> Name is required</div>
+                                <div *ngIf="f.Username.errors.pattern">Enter only Alphabets</div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-5 offset-4">
+                            <label>Password:</label>
+                            <input type="text"  formControlName="Password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Password.errors }" />
+                            <div *ngIf="submitted && f.Password.errors" class="invalid-feedback">
+                                <div *ngIf="f.Password.errors.required">Password is required</div>
+                                <div *ngIf="f.Password.errors.pattern">Password must be 8 letters and last digit is special character</div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-5 offset-4">
+                            <label>CompanyName:</label>
+                            <input type="text" formControlName="Companyname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Companyname.errors }" />
+                            <div *ngIf="submitted && f.Companyname.errors" class="invalid-feedback">
+                                <div *ngIf="f.Companyname.errors.required">company Name is required</div>
+                                <div *ngIf="f.Companyname.errors.pattern">Enter only Alphabets</div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-5 offset-4">
+                            <label>Gstin:</label>
+                            <input type="text" formControlName="Gstin" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Gstin.errors }" />
+                            <div *ngIf="submitted && f.Gstin.errors" class="invalid-feedback">
+                                <div *ngIf="f.Gstin.errors.required"> field is required</div>
+                                <div *ngIf="f.Gstin.errors.pattern">tax ident number</div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group col-md-5 offset-4">
+                            <label>Brief about company:</label>
+                            <input type="text" formControlName="Briefaboutcompany" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Briefaboutcompany.errors }" />
+                            <div *ngIf="submitted && f.Briefaboutcompany.errors" class="invalid-feedback">
+                                <div *ngIf="f.Briefaboutcompany.errors.required">  is required</div>
+                                
+                            </div>
+                        </div>
+                        <div class="form-group col-md-5 offset-4">
+                            <label>Address:</label>
+                            <input type="text" formControlName="Address" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Address.errors }" />
+                            <div *ngIf="submitted && f.Address.errors" class="invalid-feedback">
+                                <div *ngIf="f.Address.errors.required"> field is required</div>
+                                
+                            </div>
+                        </div>
+                        <div class="form-group col-md-5 offset-4">
+                            <label>Website:</label>
+                            <input type="text" formControlName="Website" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Website.errors }" />
+                            <div *ngIf="submitted && f.Website.errors" class="invalid-feedback">
+                                <div *ngIf="f.Website.errors.required">website is required</div>
+                                <!-- <div *ngIf="f.website.errors.email">website must be a valid email address</div> -->
+                            </div>
+                        </div>
+                        <div class="form-group col-md-5 offset-4">
+                            <label>Email:</label>
+                            <input type="text" formControlName="Email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Email.errors }" />
+                            <div *ngIf="submitted && f.Email.errors" class="invalid-feedback">
+                                <div *ngIf="f.Email.errors.required">Email is required</div>
+                                <div *ngIf="f.Email.errors.email">Email must be a valid email address</div>
+                            </div>
+                        </div>
+                       
+                    
+                   
+                    <div class="form-group col-md-5 offset-4">
+                        <label>Mobile:</label>
+                        <input type="text" formControlName="Mobile" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Mobile.errors }" />
+                        <div *ngIf="submitted && f.Mobile.errors" class="invalid-feedback">
+                            <div *ngIf="f.Mobile.errors.required">Mobile no is required</div>
+                            <div *ngIf="f.Mobile.errors.pattern">Mobile no Must be Valid</div>
+                        </div>
+                    </div>   
+                </form>
+          <div class="modal-footer">
+            <button class="btn btn-primary mr-1" (click)="Update()">Update</button>
+            <button class="btn btn-danger" type="reset" (click)="onReset()">Reset</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div>
+    </div>
+</div>
+</div>

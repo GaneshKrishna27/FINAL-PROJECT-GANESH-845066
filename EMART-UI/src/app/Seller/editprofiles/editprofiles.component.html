@@ -1,0 +1,102 @@
+<div class="container">
+    <div class="card bg-light mb-3">
+        <h5 class="card-header text-center">Signup-Seller</h5>
+        <div class="card-body">
+            <form [formGroup]="editprofilesForm" >
+                <div class="form-group col-md-5 offset-4">
+                    <label>SellerId:</label>
+                    <input type="text" formControlName="Sid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Sid.errors }" />
+                    <div *ngIf="submitted && f.Sid.errors" class="invalid-feedback">
+                        <div *ngIf="f.Sid.errors.required">Seller id is required</div>
+                       
+                    </div>
+                </div>
+
+                    <div class="form-group col-md-5 offset-4">
+                        <label>UserName:</label>
+                        <input type="text" formControlName="Username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Username.errors }" />
+                        <div *ngIf="submitted && f.Username.errors" class="invalid-feedback">
+                            <div *ngIf="f.Username.errors.required"> Name is required</div>
+                            <div *ngIf="f.Username.errors.pattern">Enter only Alphabets</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-5 offset-4">
+                        <label>Password:</label>
+                        <input type="password"  formControlName="Password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Password.errors }" />
+                        <div *ngIf="submitted && f.Password.errors" class="invalid-feedback">
+                            <div *ngIf="f.Password.errors.required">Password is required</div>
+                            <div *ngIf="f.Password.errors.pattern">Password must be 8 letters and last digit is special character</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-5 offset-4">
+                        <label>CompanyName:</label>
+                        <input type="text" formControlName="Companyname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Companyname.errors }" />
+                        <div *ngIf="submitted && f.Companyname.errors" class="invalid-feedback">
+                            <div *ngIf="f.Companyname.errors.required">company Name is required</div>
+                            <div *ngIf="f.Companyname.errors.pattern">Enter only Alphabets</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-5 offset-4">
+                        <label>Gstin:</label>
+                        <input type="text" formControlName="Gstin" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Gstin.errors }" />
+                        <div *ngIf="submitted && f.Gstin.errors" class="invalid-feedback">
+                            <div *ngIf="f.Gstin.errors.required"> field is required</div>
+                            <div *ngIf="f.Gstin.errors.pattern">tax ident number</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group col-md-5 offset-4">
+                        <label>Brief about company:</label>
+                        <input type="text" formControlName="Briefaboutcompany" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Briefaboutcompany.errors }" />
+                        <div *ngIf="submitted && f.Briefaboutcompany.errors" class="invalid-feedback">
+                            <div *ngIf="f.Briefaboutcompany.errors.required">  is required</div>
+                            
+                        </div>
+                    </div>
+                    <div class="form-group col-md-5 offset-4">
+                        <label>Address:</label>
+                        <input type="text" formControlName="Address" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Address.errors }" />
+                        <div *ngIf="submitted && f.Address.errors" class="invalid-feedback">
+                            <div *ngIf="f.Address.errors.required"> field is required</div>
+                            
+                        </div>
+                    </div>
+                    <div class="form-group col-md-5 offset-4">
+                        <label>Website:</label>
+                        <input type="text" formControlName="Website" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Website.errors }" />
+                        <div *ngIf="submitted && f.Website.errors" class="invalid-feedback">
+                            <div *ngIf="f.Website.errors.required">website is required</div>
+                            <!-- <div *ngIf="f.website.errors.email">website must be a valid email address</div> -->
+                        </div>
+                    </div>
+                    <div class="form-group col-md-5 offset-4">
+                        <label>Email:</label>
+                        <input type="text" formControlName="Email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Email.errors }" />
+                        <div *ngIf="submitted && f.Email.errors" class="invalid-feedback">
+                            <div *ngIf="f.Email.errors.required">Email is required</div>
+                            <div *ngIf="f.Email.errors.email">Email must be a valid email address</div>
+                        </div>
+                    </div>
+                   
+                
+               
+                <div class="form-group col-md-5 offset-4">
+                    <label>Mobile:</label>
+                    <input type="text" formControlName="Mobile" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Mobile.errors }" />
+                    <div *ngIf="submitted && f.Mobile.errors" class="invalid-feedback">
+                        <div *ngIf="f.Mobile.errors.required">Mobile no is required</div>
+                        <div *ngIf="f.Mobile.errors.pattern">Mobile no Must be Valid</div>
+                    </div>
+                </div>   
+            
+               
+                <div class="text-center">
+                    <button class="btn btn-success mr-1" type="search" (click)="onSearch()">Search</button>
+                    <button class="btn btn-primary mr-1" (click)="onSubmit()">Update</button>
+                    <button class="btn btn-danger" type="reset" (click)="onReset()">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    

@@ -1,0 +1,46 @@
+
+<nav class="navbar navbar-expand-lg navbar-light border-bottom box-shadow mb-3"  style="background-color: whitesmoke;">
+    <div class="container">
+        <h6 class="navbar-brand" ><img src="assets\images\Emart.png"width="100" height="35" alt=""></h6> 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active ">
+          <a class="nav-link" routerLink="/sellerindex" style="color:black">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" [routerLink]="'add-items'" style="color:black">AddItems</a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link" [routerLink]="'view-items'" style="color:black">ViewItems</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link"[routerLink]="'viewprofiles'" style="color:black">ViewProfile</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link"[routerLink]="'view-reports'" style="color:black">ViewReports</a>
+          </li>
+      
+      <!-- <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+    
+    </ul>
+    
+      <div class="nav-item ml-auto">
+        <a class="nav-link"[routerLink]="['/logout']" style="color:black"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+      </div>
+    
+    </div>
+</div>
+</nav>
+<!-- <div class=" container">
+  <div class="offset-4 mx-4 my-4">
+<h1 style="color: #e3f2fd;">Welcome {{username}}</h1>
+</div>
+</div> -->
+<router-outlet></router-outlet>

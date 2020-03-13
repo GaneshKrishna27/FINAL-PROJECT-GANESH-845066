@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-light border-bottom box-shadow mb-3" style="background-color:whitesmoke">
+  <div class="container">
+      <h6 class="navbar-brand" ><img src="assets\images\Emart.png"width="100" height="35" alt=""></h6> 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active ">
+          <a class="nav-link" [routerLink]="['/buyerindex']" style="color:black">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link" [routerLink]="['/purchase-history']"style="color:black">PurchaseHistory</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/viewprofile']"style="color:black">Viewprofile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/search']"style="color:black">SearchItems</a>
+          </li>
+          <li class="nav-item ">
+              <a class="nav-link"[routerLink]="['/viewcart']"style="color:black">ViewCart({{count}})</a>
+            </li>
+  </ul> 
+    <div class="nav-item ml-auto">
+      <a class="nav-link" [routerLink]="['/logout']"style="color:black"> Logout</a>
+    </div>
+  </div>
+</div>
+</nav>
+
+<div class="container">
+  <br/> 
+ <table class="table table-light">
+   <tr >
+     <th>ItemId</th>
+     <th>Number Of Items</th>
+     <th>Seller ID</th>
+     <th>Transaction Type</th>
+     <th>Ordered Date</th>
+   </tr>
+   <tr *ngFor="let item of phlist" >
+     <td>{{item.iid}}</td>
+     <td>{{item.noofitems}}</td>
+     <td>{{item.sid}}</td>
+     <td>{{item.transactiontype}}</td>
+     <td>{{item.datetime}}</td>   
+   </tr>
+ </table>
+</div>    

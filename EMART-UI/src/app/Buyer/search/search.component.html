@@ -1,0 +1,89 @@
+<nav class="navbar navbar-expand-lg navbar-light border-bottom box-shadow mb-3"  style="background-color: whitesmoke;">
+  <div class="container">
+      <h6 class="navbar-brand" ><img src="assets\images\Emart.png"width="100" height="35" alt=""></h6> 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active ">
+          <a class="nav-link" [routerLink]="['/buyerindex']" style="color:black">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link" [routerLink]="['/purchase-history']"style="color:black">PurchaseHistory</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/viewprofile']"style="color:black">Viewprofile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/search']"style="color:black">SearchItems</a>
+          </li>
+          <li class="nav-item ">
+              <a class="nav-link"[routerLink]="['/viewcart']"style="color:black">ViewCart({{count}})</a>
+            </li>
+  </ul> 
+    <div class="nav-item ml-auto">
+      <a class="nav-link" [routerLink]="['/logout']"style="color:black"> Logout</a>
+    </div>
+  </div>
+</div>
+</nav>
+
+<form [formGroup]="SearchForm">
+  <div class="form-inline my-2 my-lg-0 offset-5">
+    <input class="form-control mr-sm-2" formControlName="itemname" type="search" placeholder="Search" aria-label="Search"[(ngModel)]="itemname">
+        <button class="btn btn-success my-2 my-sm-0" type="submit" (click)="Search()">Search</button>
+  </div>
+</form>
+<br>
+<!-- <div class="form-inline my-2 my-lg-0 offset-5">
+      <h5 style="color: whitesmoke;">Click Here For Advanced Search...</h5>
+  </div>
+  <div class="form-inline my-2 my-lg-0 offset-5">
+  <button style="width: 30%;" class="btn btn-success" type="button" (click)="Show()">Search By Category</button> 
+  </div>
+<br> -->
+<div class="form-inline my-2 my-lg-0 offset-5 text-center" >
+  <label><h5>Search By Category:&nbsp;</h5></label> 
+  <select [(ngModel)]="category">   
+      <option *ngFor="let item of clist" value="{{item.cid}}">{{item.categoryname}}</option>
+    </select>&nbsp;
+    <button class="btn btn-success" type="button" (click)="SearchByCategory(category)">Search</button>
+</div>
+<br>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-4" *ngFor="let item of list">
+    
+        <div class="card" style="width:250px" >
+           <img class="card-img-top" src="/assets/images/{{item.image}}" alt="Card image cap"> 
+            <h5 class="card-title">{{item.itemname}}</h5>
+            <div class="card-body">
+             <!-- ItemId:{{item.iid}}<br/>
+              CategoryId:{{item.cid}}<br/>
+              SubCategoryId:{{item.scid}}<br/>
+              SellerId: {{item.sid}}<br/> -->
+              Price: {{item.price}}<br/>
+              Description:{{item.description}}<br/>
+              <!-- Stock:{{item.stock}}<br/>
+              Remarks:{{item.remarks}}  -->
+          </div>
+       
+          <div class="card-footer">
+            <div class="text-center">
+              <button class="btn btn-success mr-1" (click)="Buy(item)" >Buy</button>
+              <button class="btn btn-outline-info"(click)="AddtoCart(item)" >AddToCart</button>
+          </div>
+          
+          </div>
+          
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+

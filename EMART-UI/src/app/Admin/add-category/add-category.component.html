@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="card bg-light mb-3">
+        <h5 class="card-header text-center">Add Category</h5>
+        <div class="card-body">
+            <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
+               
+                <!-- <div class="form-group col-md-5 offset-4">
+                    <label>CategoryId:</label>
+                    <input type="text" formControlName="Cid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Cid.errors }" />
+                    <div *ngIf="submitted && f.Cid.errors" class="invalid-feedback">
+                        <div *ngIf="f.Cid.errors.required">categoryid is required</div>
+                       
+                    </div>
+                </div> -->
+                    <div class="form-group col-md-5 offset-4">
+                        <label>CategoryName:</label>
+                        <select formControlName="Categoryname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Categoryname.errors }">
+                            <option value=""></option>
+                            <option value="Clothes">Clothes</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Accessories">HomeAppliances</option>
+                            <option value="Grocery">Grocery</option>
+                        </select>
+                        <div *ngIf="submitted && f.Categoryname.errors" class="invalid-feedback">
+                            <div *ngIf="f.Categoryname.errors.required"> categoryname is required</div>
+                            <div *ngIf="f.Categoryname.errors.pattern">Enter only Alphabets</div>
+                        </div>
+                    </div>
+   
+                <div class="form-group col-md-5 offset-4">
+                    <label>Briefdetails:</label>
+                    <input type="text" formControlName="Briefdetails" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Briefdetails.errors }" />
+                    <div *ngIf="submitted && f.Briefdetails.errors" class="invalid-feedback">
+                        <div *ngIf="f.Briefdetails.errors.required">Briefdetails is required</div>    
+                    </div>
+                </div>   
+            
+              
+                <div class="text-center">
+                    <button class="btn btn-primary mr-1">Add</button>
+                    <button class="btn btn-danger" type="reset" (click)="onReset()">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    

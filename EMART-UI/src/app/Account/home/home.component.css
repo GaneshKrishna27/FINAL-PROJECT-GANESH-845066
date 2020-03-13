@@ -1,0 +1,44 @@
+#main {
+    margin-top: 80px;
+  }
+.about h3 {
+    font-weight: 400;
+    font-size: 26px;
+  }
+  
+  .about ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about ul li {
+    padding-bottom: 10px;
+  }
+  
+  .about ul i {
+    font-size: 20px;
+    padding-right: 4px;
+    color: #70b9b0;
+  }
+  
+  .about p:last-child {
+    margin-bottom: 0;
+  }
+  /* .navbar{
+    background: #67B26F; 
+    background: -webkit-linear-gradient(to right, #4ca2cd, #67B26F);  
+    background: linear-gradient(to right, #4ca2cd, #67B26F); 
+    
+  } */
+
+  .footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:transparent;
+    color:#8B008B;
+    text-align: center;
+    height: auto;
+    font-weight: bold;
+  }

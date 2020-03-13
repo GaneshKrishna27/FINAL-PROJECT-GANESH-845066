@@ -1,0 +1,88 @@
+<nav class="navbar navbar-expand-lg navbar-light border-bottom box-shadow mb-3"  style="background-color: whitesmoke;">
+  <div class="container">
+      <h6 class="navbar-brand" ><img src="assets\images\Emart.png"width="100" height="35" alt=""></h6> 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active ">
+          <a class="nav-link" [routerLink]="['/buyerindex']" style="color:black">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link" [routerLink]="['/purchase-history']"style="color:black">PurchaseHistory</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/viewprofile']"style="color:black">Viewprofile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/search']"style="color:black">SearchItems</a>
+          </li>
+          <li class="nav-item ">
+              <a class="nav-link"[routerLink]="['/viewcart']"style="color:black">ViewCart({{count}})</a>
+            </li>
+  </ul> 
+    <div class="nav-item ml-auto">
+      <a class="nav-link" [routerLink]="['/logout']"style="color:black"> Logout</a>
+    </div>
+  </div>
+</div>
+</nav>
+<div class="container">
+<div class="card bg-light mb-3">
+  <h5 class="card-header text-center" >Payment </h5>
+                      <div class="card-body">
+                          <form [formGroup]="purchaseform" (ngSubmit)="onSubmit()">    
+                                <div class="form-group col-md-5 offset-4">
+                                  <label >Number Of Items</label>
+                                  <input type="text" formControlName="numberOfItems" class="form-control" autofocus/>
+                                </div>
+                                <!-- <div class="form-group col-md-5 offset-4">
+                                  <label >Date</label>
+                                  <input type="date" formControlName="dateTime" class="form-control"/>
+                                </div> -->
+                              <div class="form-group col-md-5 offset-4">
+                                  <label> PayMent Mode</label>
+                                  <select formControlName="transactionType">
+                                      <option value="-1">Choose..</option>
+                                      <option value="credit">Credit Card</option>
+                                      <option value="debit">Debit Card</option>
+                                      <!-- <option value="cod">Cash On Delivery</option> -->
+                                  </select>
+                                </div>
+                                <div class="form-group col-md-5 offset-4">
+                                  <label >Card Holders Name</label>
+                                  <input type="text" formControlName="name" class="form-control"/>
+                                </div>
+                                <div class="form-group col-md-5 offset-4">
+                                  <label >Card Number</label>
+                                  <input type="text" formControlName="cardNumber" class="form-control"/>
+                                </div>
+                                <div class="form-group col-md-5 offset-4">
+                                  <label >CVV</label>
+                                  <input type="number" formControlName="cvv" class="form-control" style="width: 30%;"/>
+                                </div>
+                                <div class="form-group col-md-5 offset-4">
+                                  <label >ExpiryDate</label>
+                                  <input type="date" formControlName="edate" class="form-control"/>
+                                </div>
+                                
+                                <div class="form-group col-md-5 offset-4">
+                                  <label >Remarks</label>
+                                  <input type="text" formControlName="remarks" class="form-control"/>
+                                </div>
+                                <!-- <div class="form-group col-md-5 offset-4">
+                                  <label >Transaction Status</label>
+                                  <input type="text" formControlName="transactionstatus" class="form-control"/>
+                                </div> -->
+                                <div class="text-center">
+                                  <button class="btn btn-primary mr-1">Purchase</button>
+                                  <button class="btn btn-danger" type="reset" (click)="onReset()">Reset</button>
+                              </div>
+                              
+                          </form>
+                      </div>
+                  </div>
+</div>

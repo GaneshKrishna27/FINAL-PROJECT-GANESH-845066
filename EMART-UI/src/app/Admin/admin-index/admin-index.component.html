@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light border-bottom box-shadow mb-3"  style="background-color: #e3f2fd;">
+    <div class="container">
+      <h6 class="navbar-brand" ><img src="assets\images\Emart.png"width="100" height="35" alt=""></h6> 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active ">
+          <a class="nav-link"[routerLink]="['/adminindex']">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Add-Data</a>
+          <div class="dropdown-menu">  
+              <a class="dropdown-item"[routerLink]="['/adminindex/add-category']">Add-category</a>
+              <a class="dropdown-item" [routerLink]="['/adminindex/add-subcategory']"> Add-subcategory</a>
+          </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">View-Data</a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item"[routerLink]="['/adminindex/viewcategory']">View-category</a>
+            <a class="dropdown-item" [routerLink]="['/adminindex/viewsubcategory']"> View-subcategory</a>
+        </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Block/UnBlock-Users</a>
+      <div class="dropdown-menu">
+          <a class="dropdown-item"[routerLink]="['/adminindex/block-unblock-buyer']">Block/UnBlock-Buyer</a>
+          <a class="dropdown-item" [routerLink]="['/adminindex/block-unblock-seller']"> Block/UnBlock-Seller</a>
+      </div>
+  </li>
+          <li class="nav-item ">
+            <a class="nav-link" [routerLink]="['/adminindex/daily-report']">DailyReports</a>
+          </li>
+  
+    </ul>
+    
+      <div class="nav-item ml-auto">
+        <a class="nav-link" [routerLink]="['/logout']"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+      </div>
+    
+    </div>
+</div>
+</nav>
+
+<router-outlet></router-outlet>

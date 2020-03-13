@@ -1,0 +1,134 @@
+<nav class="navbar navbar-expand-lg navbar-light border-bottom box-shadow mb-3"  style="background-color: whitesmoke;">
+  <div class="container">
+      <h6 class="navbar-brand" ><img src="assets\images\Emart.png"width="100" height="35" alt=""></h6> 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active ">
+          <a class="nav-link" [routerLink]="['/buyerindex']" style="color:black">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link" [routerLink]="['/purchase-history']" style="color:black">PurchaseHistory</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/viewprofile']" style="color:black">Viewprofile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/search']" style="color:black">SearchItems</a>
+          </li>
+          <li class="nav-item ">
+              <a class="nav-link"[routerLink]="['/viewcart']" style="color:black">ViewCart({{count}})</a>
+            </li>
+  </ul> 
+    <div class="nav-item ml-auto">
+      <a class="nav-link" [routerLink]="['/logout']" style="color:black"> Logout</a>
+    </div>
+  </div>
+</div>
+</nav>
+
+
+          <div class="container">
+          <div class="card mb-3 offset-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img class="card-img-top" src="/assets/images/b.jpeg" alt="Card image cap">
+              </div>
+              <div class="col-md-8" >
+                <div class="card-body"  >
+                  <h5 class="card-title">{{buyer.username}}</h5>
+                  <p class="card-text">Email:{{buyer.email}}</p>
+                  <p class="card-text"> Mobile:{{buyer.mobile}}</p>
+                  <p class="card-text"> DateTime:{{buyer.datetime}}</p>
+                </div>
+                <div class="card-footer text-muted">
+                  <button class="btn btn-success mr-1"  data-toggle="modal" data-target="#myModal" (click)="Editprofile()" >EditProfile</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+
+
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">EditProfile</h4>
+                </div>
+                <div class="modal-body">
+                  <form [formGroup]="EditProfileForm">
+                    
+                      <!-- <div class="form-group col-md-5 offset-4">
+                          <label>BuyerId:</label>
+                          <input type="text" formControlName="Bid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Bid.errors }" />
+                          <div *ngIf="submitted && f.Bid.errors" class="invalid-feedback">
+                          <div *ngIf="f.Bid.errors.required">Buyer id is required</div> 
+      
+                          </div>        
+                      </div> -->
+      
+                          <div class="form-group col-md-5 offset-4">
+                              <label for="username">Username:</label>
+                              <input type="text" formControlName="Username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Username.errors }" />
+                              <div *ngIf="submitted && f.Username.errors" class="invalid-feedback">
+                                  <div *ngIf="f.Username.errors.required">Username is required</div>
+                              </div>
+                          </div>
+                      
+                          <div class="form-group col-md-5 offset-4">
+                              <label for="password">Password:</label>
+                              <input type="text" formControlName="Password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Password.errors }" />
+                              <div *ngIf="submitted && f.Password.errors" class="invalid-feedback">
+                                  <div *ngIf="f.Password.errors.required">Password is required</div>
+                                  <div *ngIf="f.Password.errors.pattern">Pasword Must be Valid</div>
+                              </div>
+                          </div>
+          
+                      <div class="form-group col-md-5 offset-4 ">
+                          <label>Email:</label>
+                          <input type="email" formControlName="Email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Email.errors }" />
+                          <div *ngIf="submitted && f.Email.errors" class="invalid-feedback">
+                              <div *ngIf="f.Email.errors.required">Email is required</div>
+                              <div *ngIf="f.Email.errors.email">Email must be a valid email address</div>
+                          </div>
+                      </div>
+                      
+                      <div class="form-group col-md-5 offset-4">
+                          <label>Mobile:</label>
+                          <input type="text" formControlName="Mobile" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Mobile.errors }" />
+                          <div *ngIf="submitted && f.Mobile.errors" class="invalid-feedback">
+                              <div *ngIf="f.Mobile.errors.required">Mobile no is required</div>
+                              <div *ngIf="f.Mobile.errors.pattern">Mobile no Must be Valid</div>
+                          </div>
+                      </div>
+                      <!-- <div class="form-group col-md-5 offset-4">
+                        <label>DateTime:</label>
+                        <input type="text"  formControlName="Datetime" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Datetime.errors }" />
+                        <div *ngIf="submitted && f.Datetime.errors" class="invalid-feedback">
+                            <div *ngIf="f.Datetime.errors.required">Date is required</div>
+                            <div *ngIf="f.datetime.errors.pattern">Date Must be Valid Format</div> 
+                        </div>
+                    </div>  -->
+                
+            </form>
+                <div class="modal-footer">
+                  <button class="btn btn-primary mr-1" (click)="Update()">Update</button>
+                  <button class="btn btn-danger" type="reset" (click)="onReset()">Reset</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+          </div>
+      </div>
+    </div>
+    
+
+          
+
+
+  
+
+

@@ -1,0 +1,128 @@
+<header >
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light  border-bottom box-shadow mb-3" style="background-color: whitesmoke;">
+        <div class="container">
+            <h6 class="navbar-brand"  ><img src="assets\images\Emart.png"width="100" height="35" alt=""></h6> 
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+
+                <ul class="navbar-nav flex-grow-1 form-inline my-2 my-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/home']"style="color:black">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/home']"style="color:black" >About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/home']"style="color:black" >Contact</a>
+                    </li>
+                   
+                    <!-- <li class="nav-item">
+                        <form class="form-inline my-2 my-lg-0">
+
+                            <input class="form-control mr-sm-2 " type="text" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
+                        </form>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Categories</a>
+
+                        <div class="dropdown-menu">
+                            <p class="dropdown-item">Categories</p>
+                            <a class="dropdown-item" href="#">Electronics</a>
+                            <a class="dropdown-item" href="#"> Clothes</a>
+                            <a class="dropdown-item" href="#"> Grocery</a>
+                            <a class="dropdown-item" href="#"> Home Appliances</a>
+                        </div>
+                    </li> -->
+                    <li class="nav-item ml-auto">
+                    <a [routerLink]="['/login']" class="nav-link" style="color:black"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                    </li>
+                   
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+<div class="card text-white bg-info mb-3">
+    <h5 class="card-header text-center">Signup-Buyer</h5>
+    <div class="card-body">
+        <form [formGroup]="SignupForm" (ngSubmit)="onSubmit()">
+            
+                <!-- <div class="form-group col-md-5 offset-4">
+                    <label>BuyerId:</label>
+                    <input type="text" formControlName="bid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.bid.errors }" />
+                    <div *ngIf="submitted && f.bid.errors" class="invalid-feedback">
+                    <div *ngIf="f.bid.errors.required">Buyer id is required</div> 
+
+                    </div>        
+                </div> -->
+            
+            
+                <div class="form-group col-md-5 offset-4">
+                    <label for="username">Username:</label>
+                    <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                        <div *ngIf="f.username.errors.required">Username is required</div>
+                        <!-- <div *ngIf="f.Username.errors.pattern">Username Must be Valid</div> -->
+                    </div>
+                </div>
+            
+                <div class="form-group col-md-5 offset-4">
+                    <label for="password">Password:</label>
+                    <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                        <div *ngIf="f.password.errors.pattern">Password Must be Valid</div>
+                    </div>
+                </div>
+
+            <div class="form-group col-md-5 offset-4 ">
+                <label>Email:</label>
+                <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">Email is required</div>
+                    <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                </div>
+            </div>
+            
+            <div class="form-group col-md-5 offset-4">
+                <label>Mobile:</label>
+                <input type="text" formControlName="mobile" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" />
+                <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+                    <div *ngIf="f.mobile.errors.required">Mobile no is required</div>
+                    <div *ngIf="f.mobile.errors.pattern">Mobile no Must be Valid</div>
+                </div>
+            </div>
+            
+            <div class="form-group col-md-5 offset-4">
+                <label>DateTime:</label>
+                <input type="date" formControlName="datetime" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.datetime.errors }" />
+                <div *ngIf="submitted && f.datetime.errors" class="invalid-feedback">
+                    <div *ngIf="f.datetime.errors.required">Date is required</div>
+                   <div *ngIf="f.datetime.errors.pattern">Date Must be Valid Format</div> 
+                </div>
+            </div> 
+        
+            <div class="form-group form-check col-md-5 offset-5">
+                <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input" [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }" />
+                <label for="acceptTerms" class="form-check-label">Accept Terms & Conditions</label>
+                <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div>
+            </div>
+        
+        <div class="text-center">
+            <button class="btn btn-primary mx-4">Signup</button>
+            <button class="btn btn-danger" type="reset" (click)="onReset()">Reset</button>
+        </div>
+        </form>
+    </div>
+</div>
+</div>
+
