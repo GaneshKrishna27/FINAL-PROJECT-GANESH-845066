@@ -1,0 +1,22 @@
+Create database EmartDB
+
+create table Buyer(Bid varchar(20) primary key,Username varchar(20) not null,Password varchar(10) not null,Email varchar(20)not null,Mobile int not null,Date_time Date not null);
+
+create table Seller(Sid varchar(20) primary key,Username varchar(20) not null,Password varchar(10) not null,Companyname varchar(20) not null,Gstin varchar(10) not null,
+Briefaboutcompany varchar(30) not null,Postal_address varchar(20) not null,Website varchar(20) not null,Email varchar(20)not null,Mobile int not null);
+
+create table Category(Cid varchar(20) primary key,Categoryname varchar(20) not null,Brief_details varchar(30) not null);
+
+create table SubCategory(SCid varchar(20) primary key,SubCategoryname varchar(20) not null,Cid varchar(20) foreign key references Category(Cid),
+Brief_details varchar(30) not null,Gst varchar(20) not null);
+
+create table Items(Iid varchar(20) primary key,Cid varchar(20) foreign key references Category(Cid),SCid varchar(20) foreign key references SubCategory(SCid),
+Price int not null,Itemname varchar(20)  not null,Description varchar(30) not null, Stock int not null,Remarks varchar(30) not null,Photo image null);
+
+create table PurchaseHistory(PHid varchar(20) primary key,Sid varchar(20) foreign key references Seller(Sid),Bid varchar(20) foreign key references Buyer(Bid),
+Iid varchar(20) foreign key references Items(Iid),Transactiontype varchar(20) not null,Nofitems int not null,Date_time date not null,Remarks varchar(20));
+
+create table Cart(Cartid varchar(20) primary key,Iid varchar(20) foreign key references Items(Iid),Bid varchar(20) foreign key references Buyer(Bid),Cid varchar(20) foreign key references Category(Cid),SCid varchar(20) foreign key references SubCategory(SCid),
+Price int not null,Itemname varchar(20)  not null,Description varchar(30) null, Stock int not null,Remarks varchar(30) null,Image varchar(30) null);
+
+create table Discounts(Did varchar(20) not null, Discountcode varchar(20) not null,Percentage int not null,Startdate date not null,Enddate date not null,Description varchar(20) not null);
